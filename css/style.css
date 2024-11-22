@@ -8,14 +8,14 @@
   font-family: "SF-Pro-Display";
   src: url("../fonts/SF-Pro-Display-Regular.woff2") format("woff2"), url("../fonts/SF-Pro-Display-Regular.woff") format("woff");
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-display: swap;
 }
 @font-face {
   font-family: "SF-Pro-Display";
-  src: url("../fonts/SF-Pro-Display-Bold.woff2") format("woff2"), url("../fonts/SF-Pro-Display-Bold.woff") format("woff");
+  src: url("../fonts/SF-Pro-Display-Regular.woff2") format("woff2"), url("../fonts/SF-Pro-Display-Regular.woff") format("woff");
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-display: swap;
 }
 @font-face {
@@ -67,10 +67,24 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 75px 0 30px;
+  padding: 25px 0 30px;
+  opacity: 0;
+  transform: translate(0px, -100%);
+  transition: all 1s ease;
+}
+.header__top.--active {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 .header__content {
   max-width: 600px;
+  opacity: 0;
+  transform: translate(-100%, 0);
+  transition: all 1s ease 0.6s;
+}
+.header__content.--active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .header__content-title {
   font-family: "spaceagecyrillic-regular";
@@ -90,7 +104,8 @@ button {
 .header__content-text {
   font-size: 24px;
   line-height: 29px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  font-weight: 700;
 }
 .header__content-btn {
   font-size: 24px;
@@ -100,6 +115,11 @@ button {
   width: 100%;
   border: 1px solid #fff;
   padding: 15px 10px;
+  transition: all 0.3s ease;
+}
+.header__content-btn:hover {
+  color: #cb0e0e;
+  border-color: #cb0e0e;
 }
 .header__description {
   display: flex;
@@ -107,6 +127,13 @@ button {
   gap: 50px;
   margin-top: 40px;
   margin-bottom: 50px;
+  opacity: 0;
+  transform: translate(100%, 0px);
+  transition: all 1s ease 0.8s;
+}
+.header__description.--active {
+  opacity: 1;
+  transform: translate(0px, 0px);
 }
 .header__description-text {
   width: 165px;
@@ -150,6 +177,11 @@ button {
   line-height: 29px;
   margin-left: auto;
   margin-right: 22px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.phone:hover {
+  color: #cb0e0e;
 }
 
 .login {

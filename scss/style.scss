@@ -3,25 +3,22 @@
 *::before {
   box-sizing: border-box;
 }
-
 @font-face {
   font-family: "SF-Pro-Display";
   src: url("../fonts/SF-Pro-Display-Regular.woff2") format("woff2"),
     url("../fonts/SF-Pro-Display-Regular.woff") format("woff");
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-display: swap;
 }
-
 @font-face {
   font-family: "SF-Pro-Display";
-  src: url("../fonts/SF-Pro-Display-Bold.woff2") format("woff2"),
-    url("../fonts/SF-Pro-Display-Bold.woff") format("woff");
+  src: url("../fonts/SF-Pro-Display-Regular.woff2") format("woff2"),
+    url("../fonts/SF-Pro-Display-Regular.woff") format("woff");
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-display: swap;
 }
-
 @font-face {
   font-family: "spaceagecyrillic-regular";
   src: url("../fonts/spaceagecyrillic-regular.woff2") format("woff2"),
@@ -30,7 +27,6 @@
   font-weight: normal;
   font-display: swap;
 }
-
 body {
   color: #fff;
   font-size: 16px;
@@ -38,73 +34,76 @@ body {
   font-family: "SF-Pro-Display";
   font-weight: 400;
 }
-
 a {
   color: inherit;
   text-decoration: none;
 }
-
 button {
   border: none;
   background-color: transparent;
   cursor: pointer;
   color: inherit;
 }
-
 .container {
   max-width: 1220px;
   padding: 0 10px;
   margin: 0 auto;
 }
-
 .header {
   background-image: url(../images/header-bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
   &__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
   }
-
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 75px 0 30px;
+    padding: 25px 0 30px;
+    opacity: 0;
+    transform: translate(0px, -100%);
+    transition: all 1s ease;
+    &.--active {
+      transform: translate(0px, 0px);
+      opacity: 1;
+    }
   }
-
   &__content {
     max-width: 600px;
+    opacity: 0;
+    transform: translate(-100%, 0);
+    transition: all 1s ease 0.6s;
+    &.--active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
   }
-
   &__content-title {
     font-family: "spaceagecyrillic-regular";
     font-size: 60px;
     line-height: 60px;
     font-weight: 400;
     margin-bottom: 20px;
+    & span {
+      font-size: 110px;
+    }
   }
-  &__content-title span{
-    font-size: 110px;
-  }
-
   &__content-wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
   }
-
   &__content-text {
     font-size: 24px;
     line-height: 29px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    font-weight: 700;
   }
-
   &__content-btn {
     font-size: 24px;
     line-height: 29px;
@@ -113,58 +112,62 @@ button {
     width: 100%;
     border: 1px solid #fff;
     padding: 15px 10px;
+    transition: all 0.3s ease;
+    &:hover {
+      color: #cb0e0e;
+      border-color: #cb0e0e;
+    }
   }
-
   &__description {
     display: flex;
     justify-content: flex-end;
     gap: 50px;
     margin-top: 40px;
     margin-bottom: 50px;
+    opacity: 0;
+    transform: translate(100%, 0px);
+    transition: all 1s ease 0.8s;
+    &.--active {
+      opacity: 1;
+      transform: translate(0px, 0px);
+    }
   }
-
   &__description-text {
     width: 165px;
     font-size: 14px;
     line-height: 17px;
   }
 }
-
 .menu {
   &__list {
     display: flex;
     gap: 30px;
   }
-
   &__item {
     position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -5px;
+      left: 50%;
+      height: 2px;
+      width: 0;
+      transform: translateX(-50%);
+      background-color: white;
+      transition: all 0.3s ease;
+    }
+    &:hover::after {
+      width: 100%;
+    }
   }
-
-  &__item::after {
-    position: absolute;
-    content: "";
-    bottom: -5px;
-    left: 50%;
-    height: 2px;
-    width: 0;
-    transform: translateX(-50%);
-    background-color: white;
-    transition: all 0.3s ease;
-  }
-
-  &__item:hover::after {
-    width: 100%;
-  }
-
   &__link {
     text-transform: uppercase;
     font-size: 18px;
     line-height: 21px;
     transition: all 0.3s;
-  }
-
-  &__link:hover {
-    color: #cb0e0e;
+    &:hover {
+      color: #cb0e0e;
+    }
   }
 }
 .phone {
@@ -172,6 +175,11 @@ button {
   line-height: 29px;
   margin-left: auto;
   margin-right: 22px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    color: #cb0e0e;
+  }
 }
 .login {
   margin-right: 134px;
