@@ -42,6 +42,7 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  color: inherit;
 }
 
 .container {
@@ -68,6 +69,45 @@ button {
   align-items: center;
   padding: 75px 0 30px;
 }
+.header__content {
+  max-width: 600px;
+}
+.header__content-title {
+  font-family: "spaceagecyrillic-regular";
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.header__content-title span {
+  font-size: 110px;
+}
+.header__content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.header__content-text {
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 50px;
+}
+.header__content-btn {
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  border: 1px solid #fff;
+  padding: 15px 10px;
+}
+.header__description {
+  display: flex;
+}
+.header__description-text {
+  font-size: 14px;
+}
+
 .menu__list {
   display: flex;
   gap: 30px;

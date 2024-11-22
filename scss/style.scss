@@ -48,6 +48,7 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+  color: inherit;
 }
 
 .container {
@@ -77,24 +78,49 @@ button {
   }
 
   &__content {
+    max-width: 600px;
   }
 
   &__content-title {
+    font-family: "spaceagecyrillic-regular";
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  &__content-title span{
+    font-size: 110px;
   }
 
   &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
   }
 
   &__content-text {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 50px;
   }
 
   &__content-btn {
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    border: 1px solid #fff;
+    padding: 15px 10px;
   }
 
   &__description {
+    display: flex;
   }
 
   &__description-text {
+    font-size: 14px;
   }
 }
 
