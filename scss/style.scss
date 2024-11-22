@@ -117,10 +117,16 @@ button {
 
   &__description {
     display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    margin-top: 40px;
+    margin-bottom: 50px;
   }
 
   &__description-text {
+    width: 165px;
     font-size: 14px;
+    line-height: 17px;
   }
 }
 
