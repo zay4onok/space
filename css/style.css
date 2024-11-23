@@ -69,7 +69,7 @@ button {
   align-items: center;
   padding: 25px 0 30px;
   opacity: 0;
-  transform: translate(0px, -100%);
+  transform: translate(0px, -20%);
   transition: all 1s ease;
 }
 .header__top.--active {
@@ -79,8 +79,8 @@ button {
 .header__content {
   max-width: 600px;
   opacity: 0;
-  transform: translate(-100%, 0);
-  transition: all 1s ease 0.6s;
+  transform: translate(-20%, 0);
+  transition: all 1s ease 0.5s;
 }
 .header__content.--active {
   transform: translate(0, 0);
@@ -128,7 +128,7 @@ button {
   margin-top: 40px;
   margin-bottom: 50px;
   opacity: 0;
-  transform: translate(100%, 0px);
+  transform: translate(20%, 0px);
   transition: all 1s ease 0.8s;
 }
 .header__description.--active {
