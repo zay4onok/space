@@ -31,3 +31,7 @@ if (animItems.length > 0) {
   }
   animOnScroll();
 }
+
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
