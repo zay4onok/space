@@ -307,6 +307,13 @@ button {
 }
 .how-to__wrapper {
   padding-left: 177px;
+  opacity: 0;
+  transform: translate(0, 20%);
+  transition: all 1s ease;
+}
+.how-to__wrapper.--active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .how-to__wrapper-circle, .how-to__wrapper-text, .how-to__wrapper-textspan {
   transition: all 0.3s;
