@@ -362,3 +362,61 @@ button {
 .to-book__content-text {
   width: 165px;
 }
+
+.info {
+  background-image: url(../images/info-bg.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+
+.special-offer__items {
+  display: flex;
+  justify-content: space-between;
+}
+.special-offer__item {
+  width: 500px;
+}
+.special-offer__item-box {
+  border: 1px solid #fff;
+  margin-bottom: 25px;
+  padding: 40px 75px;
+  min-height: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.special-offer__item-text {
+  width: 236px;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 auto;
+}
+.special-offer__item-text span {
+  color: #cb0e0e;
+}
+.special-offer__item-oldprice {
+  text-align: right;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 17px;
+  position: relative;
+}
+.special-offer__item-oldprice::before {
+  position: absolute;
+  content: "";
+  width: 68px;
+  height: 0.1px;
+  background-color: #cb0e0e;
+  transform: rotate(17deg);
+  top: 7px;
+}
+.special-offer__item-newprice {
+  font-size: 48px;
+  line-height: 57px;
+}
+.special-offer__item-btn {
+  width: 100%;
+}
