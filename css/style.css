@@ -374,6 +374,13 @@ button {
 .special-offer__items {
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  transform: translate(0, 20%);
+  transition: all 1s ease;
+}
+.special-offer__items.--active {
+  transform: translate(0, 0);
+  opacity: 1;
 }
 .special-offer__item {
   width: 500px;
