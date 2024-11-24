@@ -217,7 +217,7 @@ button {
 
 .about {
   background-image: url(../images/about-bg.jpg);
-  background-position: top;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -296,4 +296,33 @@ button {
        text-align-last: left;
   font-size: 12px;
   line-height: 14px;
+}
+
+.how-to {
+  background-image: url(../images/how-to-bg.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+.how-to__wrapper {
+  padding-left: 177px;
+}
+.how-to__wrapper-circle, .how-to__wrapper-text, .how-to__wrapper-textspan {
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.how-to__wrapper-box:hover .how-to__wrapper-circle {
+  r: 20;
+  fill: #036cca;
+}
+.how-to__wrapper-box:hover .how-to__wrapper-text {
+  font-size: 36px;
+  fill: #036cca;
+  transform: translateY(5px);
+}
+.how-to__wrapper-box:hover .how-to__wrapper-textspan {
+  font-size: 36px;
+  fill: #036cca;
+  transform: translateY(-20px);
 }
