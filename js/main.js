@@ -32,9 +32,9 @@ if (animItems.length > 0) {
   animOnScroll();
 }
 
-// if ("scrollRestoration" in history) {
-//   history.scrollRestoration = "manual";
-// }
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
 
 $(".slider__box").slick({
   prevArrow:
@@ -51,3 +51,27 @@ for (let i = 0; i < buttons.length; i++) {
     targetBlock.scrollIntoView({ behavior: "smooth" });
   });
 }
+
+const form = document.querySelector(".contacts__form");
+const formButton = form.querySelector(".contacts__btn");
+const inputs = form.querySelectorAll(".contacts__form-input");
+
+function checkInputs() {
+  let filled = true;
+
+  inputs.forEach((input) => {
+    if (input.value.trim() === "") {
+      filled = false;
+    }
+  });
+
+  if (filled) {
+    formButton.removeAttribute("disabled");
+  } else {
+    formButton.setAttribute("disabled");
+  }
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("input", checkInputs);
+});

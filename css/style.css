@@ -595,6 +595,14 @@ button {
 .contacts__btn {
   width: 100%;
 }
+.contacts__btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.contacts__btn:disabled:hover {
+  border-color: #fff;
+  color: white;
+}
 .contacts__guarantees {
   width: 600px;
 }

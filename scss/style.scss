@@ -603,6 +603,14 @@ button {
   }
   &__btn {
     width: 100%;
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      &:hover {
+        border-color: #fff;
+        color: white;
+      }
+    }
   }
   &__guarantees {
     width: 600px;
