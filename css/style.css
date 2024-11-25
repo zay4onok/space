@@ -304,6 +304,7 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 50px;
+  min-height: 100vh;
 }
 .how-to__wrapper {
   padding-left: 177px;
@@ -371,6 +372,10 @@ button {
   padding-bottom: 100px;
 }
 
+.special-offer {
+  margin-bottom: 40px;
+  min-height: 100vh;
+}
 .special-offer__items {
   display: flex;
   justify-content: space-between;
@@ -426,4 +431,56 @@ button {
 }
 .special-offer__item-btn {
   width: 100%;
+}
+
+.services {
+  margin-bottom: 200px;
+}
+.services__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.services__box-list {
+  width: 620px;
+  margin-right: 80px;
+}
+.services__list-title {
+  margin-bottom: 25px;
+  font-size: 24px;
+  line-height: 29px;
+}
+.services__list {
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 25px;
+  list-style: none;
+  padding-left: 36px;
+}
+.services__list-item {
+  position: relative;
+}
+.services__list-item::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  top: 50%;
+  left: -16px;
+  transform: translate(-100%, -50%);
+}
+.services__description {
+  font-size: 12px;
+  line-height: 14px;
+}
+.services__buttons {
+  width: 500px;
+}
+.services__buttons .button {
+  width: 100%;
+  margin-bottom: 50px;
+}
+.services__buttons .button:last-child {
+  margin-bottom: 0px;
 }

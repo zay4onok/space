@@ -298,6 +298,7 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 50px;
+  min-height: 100vh;
   &__wrapper {
     padding-left: 177px;
     opacity: 0;
@@ -368,6 +369,8 @@ button {
   padding-bottom: 100px;
 }
 .special-offer {
+  margin-bottom: 40px;
+  min-height: 100vh;
   &__items {
     display: flex;
     justify-content: space-between;
@@ -425,6 +428,64 @@ button {
     }
     &-btn {
       width: 100%;
+    }
+  }
+}
+
+.services {
+  margin-bottom: 200px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box-list {
+    width: 620px;
+    margin-right: 80px;
+  }
+
+  &__list-title {
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__list {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 25px;
+    list-style: none;
+    padding-left: 36px;
+  }
+
+  &__list-item {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #fff;
+      top: 50%;
+      left: -16px;
+      transform: translate(-100%, -50%);
+    }
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__buttons {
+    width: 500px;
+    & .button {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+    & .button:last-child {
+      margin-bottom: 0px;
     }
   }
 }
