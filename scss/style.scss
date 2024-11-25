@@ -732,6 +732,13 @@ button {
     display: flex;
     justify-content: flex-end;
     gap: 100px;
+    opacity: 0;
+    transform: translate(0, 20%);
+    transition: all 1s ease;
+    &.--active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
   }
   &__text-box {
     width: 165px;
