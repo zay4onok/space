@@ -54,11 +54,11 @@ for (let i = 0; i < buttons.length; i++) {
 }
 
 function isValidEmail(email) {
-  const atSymbolIndex = email.indexOf("@");
-  if (atSymbolIndex === -1) {
+  const atSymbolCount = email.split("@").length - 1;
+  if (atSymbolCount !== 1) {
     return false;
   }
-
+  const atSymbolIndex = email.indexOf("@");
   const localPart = email.slice(0, atSymbolIndex);
   const domainPart = email.slice(atSymbolIndex + 1);
 
