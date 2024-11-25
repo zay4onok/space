@@ -437,6 +437,13 @@ button {
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    opacity: 0;
+    transform: translate(0, 20%);
+    transition: all 1s ease;
+    &.--active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
   }
 
   &__box-list {
