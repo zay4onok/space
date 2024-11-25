@@ -547,3 +547,71 @@ button {
     line-height: 30px;
   }
 }
+
+.contacts {
+  padding-bottom: 100px;
+  background-color: #010203;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translate(0, 20%);
+    transition: all 1s ease;
+    &.--active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  &__box {
+    width: 500px;
+    &-text {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 46px;
+  }
+
+  &__form {
+    &-input {
+      background-color: #010203;
+      border: none;
+      border-bottom: 1px solid #fff;
+      width: 100%;
+      padding: 20px 0;
+      margin-bottom: 40px;
+      font-family: "SF-Pro-Display";
+      font-size: 14px;
+      line-height: 17px;
+      color: #fff;
+      padding-left: 5px;
+      &::placeholder {
+        font-family: "SF-Pro-Display";
+        font-size: 14px;
+        line-height: 17px;
+        color: #fff;
+      }
+      &:last-of-type {
+        margin-bottom: 70px;
+      }
+    }
+  }
+  &__btn {
+    width: 100%;
+  }
+  &__guarantees {
+    width: 600px;
+    &-text {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    &-img {
+      margin-left: auto;
+      display: block;
+    }
+  }
+}
