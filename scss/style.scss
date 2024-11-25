@@ -455,11 +455,11 @@ button {
     line-height: 29px;
     margin-bottom: 25px;
     list-style: none;
-    padding-left: 36px;
   }
 
   &__list-item {
     position: relative;
+    padding-left: 36px;
     &::before {
       position: absolute;
       content: "";
@@ -468,8 +468,8 @@ button {
       border-radius: 50%;
       background-color: #fff;
       top: 50%;
-      left: -16px;
-      transform: translate(-100%, -50%);
+      left: 0px;
+      transform: translate(0, -50%);
     }
   }
 
@@ -482,10 +482,19 @@ button {
     width: 500px;
     & .button {
       width: 100%;
-      margin-bottom: 50px;
     }
-    & .button:last-child {
-      margin-bottom: 0px;
+    & .button:first-child {
+      margin-bottom: 50px;
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        right: 0;
+        bottom: 41px;
+        background-image: url(../images/services-img.png);
+        width: 192px;
+        height: 150px;
+      }
     }
   }
 }

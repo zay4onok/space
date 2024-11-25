@@ -454,10 +454,10 @@ button {
   line-height: 29px;
   margin-bottom: 25px;
   list-style: none;
-  padding-left: 36px;
 }
 .services__list-item {
   position: relative;
+  padding-left: 36px;
 }
 .services__list-item::before {
   position: absolute;
@@ -467,8 +467,8 @@ button {
   border-radius: 50%;
   background-color: #fff;
   top: 50%;
-  left: -16px;
-  transform: translate(-100%, -50%);
+  left: 0px;
+  transform: translate(0, -50%);
 }
 .services__description {
   font-size: 12px;
@@ -479,8 +479,17 @@ button {
 }
 .services__buttons .button {
   width: 100%;
-  margin-bottom: 50px;
 }
-.services__buttons .button:last-child {
-  margin-bottom: 0px;
+.services__buttons .button:first-child {
+  margin-bottom: 50px;
+  position: relative;
+}
+.services__buttons .button:first-child::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 41px;
+  background-image: url(../images/services-img.png);
+  width: 192px;
+  height: 150px;
 }
