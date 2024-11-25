@@ -551,6 +551,7 @@ button {
 .contacts {
   padding-bottom: 100px;
   background-color: #010203;
+  min-height: 100vh;
   &__wrapper {
     display: flex;
     justify-content: space-between;

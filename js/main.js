@@ -42,3 +42,12 @@ $(".slider__box").slick({
   nextArrow:
     '<img class="slider__arrow slider__arrow-right" src="images/arrowNext.svg">',
 });
+
+const buttons = document.querySelectorAll(".button");
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function () {
+    const targetBlock = document.querySelector(".contacts");
+    targetBlock.scrollIntoView({ behavior: "smooth" });
+  });
+}
