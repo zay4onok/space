@@ -85,6 +85,7 @@ submitButtons.forEach((submitButton) => {
   submitButton.addEventListener("click", function (event) {
     event.preventDefault();
     popup.classList.remove("popup--active");
+    document.body.classList.remove("--no-scroll");
     animOnScroll();
   });
 });
@@ -95,19 +96,23 @@ const closeButton = document.querySelector(".popup__close");
 
 window.addEventListener("load", function () {
   popup.classList.add("popup--active");
+  document.body.classList.add("--no-scroll");
 });
 popupButton.addEventListener("click", function () {
   popup.classList.add("popup--active");
+  document.body.classList.add("--no-scroll");
 });
 
 closeButton.addEventListener("click", function () {
   popup.classList.remove("popup--active");
+  document.body.classList.remove("--no-scroll");
   animOnScroll();
 });
 
 popup.addEventListener("click", function (event) {
   if (event.target === popup) {
     popup.classList.remove("popup--active");
+    document.body.classList.remove("--no-scroll");
     animOnScroll();
   }
 });

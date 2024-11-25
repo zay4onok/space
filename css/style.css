@@ -33,6 +33,10 @@ body {
   font-weight: 400;
 }
 
+.--no-scroll {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
