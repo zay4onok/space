@@ -717,3 +717,63 @@ button {
   margin-left: auto;
   display: block;
 }
+
+.footer {
+  background-image: url(../images/footer-bg.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer__wrapper {
+  padding-top: 100px;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 100px;
+}
+.footer__text-box {
+  width: 165px;
+}
+.footer__text {
+  margin-bottom: 50px;
+}
+.footer__text:last-of-type {
+  margin-bottom: 0px;
+}
+.footer__menu {
+  list-style: none;
+}
+.footer__menu-item {
+  margin-bottom: 20px;
+}
+.footer__menu-item:last-child {
+  margin-bottom: 0px;
+}
+.footer__menu-link {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 21px;
+  transition: all 0.3s;
+}
+.footer__menu-link:hover {
+  color: #cb0e0e;
+}
+.footer__links {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.footer__links-item {
+  margin-bottom: 20px;
+}
+.footer__links-item:last-child {
+  margin-bottom: 0px;
+}
+.footer__links-link {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 21px;
+  transition: all 0.3s;
+}
+.footer__links-link:hover {
+  color: #cb0e0e;
+}
