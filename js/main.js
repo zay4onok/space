@@ -35,3 +35,10 @@ if (animItems.length > 0) {
 // if ("scrollRestoration" in history) {
 //   history.scrollRestoration = "manual";
 // }
+
+$(".slider__box").slick({
+  prevArrow:
+    '<img class="slider__arrow slider__arrow-left" src="images/arrowPrev.svg">',
+  nextArrow:
+    '<img class="slider__arrow slider__arrow-right" src="images/arrowNext.svg">',
+});

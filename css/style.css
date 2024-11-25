@@ -500,3 +500,39 @@ button {
   width: 192px;
   height: 150px;
 }
+
+.slider {
+  text-align: center;
+  opacity: 0;
+  transform: translate(0, 20%);
+  transition: all 1s ease;
+}
+.slider.--active {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.slider__wrapper {
+  border: 1px solid #fff;
+  padding: 100px 0;
+  margin-bottom: 50px;
+}
+.slider__box-img {
+  margin: 0 auto;
+}
+.slider__arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+.slider__arrow-left {
+  left: 75px;
+}
+.slider__arrow-right {
+  right: 75px;
+}
+.slider__description {
+  font-family: "spaceagecyrillic-regular";
+  font-size: 24px;
+  line-height: 30px;
+}
