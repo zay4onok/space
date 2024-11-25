@@ -53,30 +53,96 @@ for (let i = 0; i < buttons.length; i++) {
   });
 }
 
-const forms = document.querySelectorAll(".contacts__form");
+function isValidEmail(email) {
+  const atSymbolIndex = email.indexOf("@");
+  if (atSymbolIndex === -1) {
+    return false;
+  }
 
-forms.forEach((form) => {
-  const formButton = form.querySelector(".contacts__btn");
-  const inputs = form.querySelectorAll(".contacts__form-input");
+  const localPart = email.slice(0, atSymbolIndex);
+  const domainPart = email.slice(atSymbolIndex + 1);
 
-  function checkInputs() {
-    let filled = true;
+  if (!localPart || !domainPart) {
+    return false;
+  }
 
-    inputs.forEach((input) => {
-      if (input.value.trim() === "") {
-        filled = false;
-      }
-    });
+  const dotIndex = domainPart.indexOf(".");
+  if (dotIndex === -1 || dotIndex === 0 || dotIndex === domainPart.length - 1) {
+    return false;
+  }
 
-    if (filled) {
-      formButton.removeAttribute("disabled");
-    } else {
-      formButton.setAttribute("disabled", true);
+  const invalidChars = [
+    " ",
+    ",",
+    "!",
+    "#",
+    "$",
+    "%",
+    "^",
+    "&",
+    "*",
+    "(",
+    ")",
+    "=",
+    "+",
+    "{",
+    "}",
+    "[",
+    "]",
+    ";",
+    ":",
+    "'",
+    '"',
+    "<",
+    ">",
+    "/",
+    "\\",
+    "|",
+    "`",
+    "~",
+  ];
+  for (let char of email) {
+    if (invalidChars.includes(char)) {
+      return false;
     }
   }
 
+  return true;
+}
+
+function checkFormValidity(form) {
+  const inputs = form.querySelectorAll(".contacts__form-input");
+  const formButton = form.querySelector(".contacts__btn");
+
+  let allFilled = true;
+  let emailValid = true;
+
   inputs.forEach((input) => {
-    input.addEventListener("input", checkInputs);
+    const value = input.value.trim();
+
+    if (value === "") {
+      allFilled = false;
+    }
+
+    if (input.classList.contains("mail")) {
+      emailValid = isValidEmail(value);
+    }
+  });
+
+  if (allFilled && emailValid) {
+    formButton.removeAttribute("disabled");
+  } else {
+    formButton.setAttribute("disabled", true);
+  }
+}
+
+const forms = document.querySelectorAll(".contacts__form");
+
+forms.forEach((form) => {
+  const inputs = form.querySelectorAll(".contacts__form-input");
+
+  inputs.forEach((input) => {
+    input.addEventListener("input", () => checkFormValidity(form));
   });
 });
 
