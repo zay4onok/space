@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/jquery.fancybox.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="popup">
+      <div class="popup__content">
+        <h2 class="popup__content-title">Регистрация</h2>
+        <form class="contacts__form">
+          <div class="contacts__form-container">
+            <i class="fas fa-envelope input-icon"></i>
+            <input
+              class="contacts__form-input"
+              placeholder="Почта"
+              type="text"
+            />
+          </div>
+          <div class="contacts__form-container">
+            <i class="fas fa-key input-icon"></i>
+            <input
+              class="contacts__form-input"
+              placeholder="Пароль"
+              type="password"
+            />
+          </div>
+          <button class="contacts__btn" type="submit" disabled>
+            Зарегистрироваться
+          </button>
+        </form>
+        <button class="popup__close">X</button>
+      </div>
+    </div>
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
@@ -47,7 +78,9 @@
               <p class="header__content-text">Будущее уже наступило!</p>
               <p class="header__content-text">Осуществи мечту детства!</p>
             </div>
-            <button class="header__content-btn button">Хочу быть космонавтом!</button>
+            <button class="header__content-btn button">
+              Хочу быть космонавтом!
+            </button>
           </div>
           <div class="header__description --anim-items --anim-no-hide">
             <p class="header__description-text">
@@ -552,7 +585,7 @@
                   placeholder="Телефон"
                   type="tel"
                 />
-                <button class="button contacts__btn" type="submit" disabled>
+                <button class="contacts__btn" type="submit" disabled>
                   ЗАБРОНИРОВАТЬ ПОЛЕТ
                 </button>
               </form>
@@ -564,7 +597,9 @@
               <p class="contacts__guarantees-text">
                 Ни одна моя ракета еще не сделала удачную попытку, потому что в
                 ней не было тебя! <br />
-                Будь первым!<br /> Колонизируй Марс!<br /> Илон Маск
+                Будь первым!<br />
+                Колонизируй Марс!<br />
+                Илон Маск
               </p>
               <img
                 class="contacts__guarantees-img"

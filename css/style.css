@@ -46,6 +46,7 @@ button {
 }
 
 .button {
+  text-align: center;
   text-transform: uppercase;
   padding: 20px 45px;
   border: 1px solid #fff;
@@ -77,6 +78,93 @@ button {
 .title.--active {
   transform: translate(0, 0);
   opacity: 1;
+}
+
+.popup {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.contacts__form-container {
+  position: relative;
+}
+
+.contacts__form-container:last-of-type {
+  margin-bottom: 50px;
+}
+
+.input-icon {
+  position: absolute;
+  top: 27px;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.popup .contacts__form-input {
+  padding-left: 30px;
+}
+
+.popup .contacts__form-input:last-of-type {
+  margin-bottom: 20px;
+}
+
+.popup .contacts__btn {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 45px;
+  border: 1px solid #fff;
+  font-size: 18px;
+  line-height: 21px;
+  transition: all 0.3s ease;
+}
+.popup .contacts__btn:hover {
+  color: #cb0e0e;
+  border-color: #cb0e0e;
+}
+
+.popup.popup--active {
+  opacity: 1;
+  visibility: visible;
+  overflow: hidden;
+}
+
+.popup__content-title {
+  font-family: "spaceagecyrillic-regular";
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 400;
+  padding-bottom: 30px;
+}
+
+.popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #010203;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+  text-align: center;
+}
+
+.popup__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
 }
 
 .header {
@@ -594,6 +682,17 @@ button {
 }
 .contacts__btn {
   width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px 45px;
+  border: 1px solid #fff;
+  font-size: 18px;
+  line-height: 21px;
+  transition: all 0.3s ease;
+}
+.contacts__btn:hover {
+  color: #cb0e0e;
+  border-color: #cb0e0e;
 }
 .contacts__btn:disabled {
   opacity: 0.5;

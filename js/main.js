@@ -1,4 +1,6 @@
 const animItems = document.querySelectorAll(".--anim-items");
+let animationPaused = true;
+
 if (animItems.length > 0) {
   window.addEventListener("scroll", animOnScroll);
   function animOnScroll() {
@@ -29,7 +31,6 @@ if (animItems.length > 0) {
       scrollTop = window.scrollY || document.documentElement.scrollTop;
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
   }
-  animOnScroll();
 }
 
 if ("scrollRestoration" in history) {
@@ -52,26 +53,61 @@ for (let i = 0; i < buttons.length; i++) {
   });
 }
 
-const form = document.querySelector(".contacts__form");
-const formButton = form.querySelector(".contacts__btn");
-const inputs = form.querySelectorAll(".contacts__form-input");
+const forms = document.querySelectorAll(".contacts__form");
 
-function checkInputs() {
-  let filled = true;
+forms.forEach((form) => {
+  const formButton = form.querySelector(".contacts__btn");
+  const inputs = form.querySelectorAll(".contacts__form-input");
+
+  function checkInputs() {
+    let filled = true;
+
+    inputs.forEach((input) => {
+      if (input.value.trim() === "") {
+        filled = false;
+      }
+    });
+
+    if (filled) {
+      formButton.removeAttribute("disabled");
+    } else {
+      formButton.setAttribute("disabled", true);
+    }
+  }
 
   inputs.forEach((input) => {
-    if (input.value.trim() === "") {
-      filled = false;
-    }
+    input.addEventListener("input", checkInputs);
   });
+});
 
-  if (filled) {
-    formButton.removeAttribute("disabled");
-  } else {
-    formButton.setAttribute("disabled");
+const submitButtons = document.querySelectorAll(".contacts__btn");
+submitButtons.forEach((submitButton) => {
+  submitButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    popup.classList.remove("popup--active");
+    animOnScroll();
+  });
+});
+
+const popupButton = document.querySelector(".login__img");
+const popup = document.querySelector(".popup");
+const closeButton = document.querySelector(".popup__close");
+
+window.addEventListener("load", function () {
+  popup.classList.add("popup--active");
+});
+popupButton.addEventListener("click", function () {
+  popup.classList.add("popup--active");
+});
+
+closeButton.addEventListener("click", function () {
+  popup.classList.remove("popup--active");
+  animOnScroll();
+});
+
+popup.addEventListener("click", function (event) {
+  if (event.target === popup) {
+    popup.classList.remove("popup--active");
+    animOnScroll();
   }
-}
-
-inputs.forEach((input) => {
-  input.addEventListener("input", checkInputs);
 });
