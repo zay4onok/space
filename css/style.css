@@ -877,3 +877,72 @@ button {
     color: inherit;
   }
 }
+@media (max-width: 610px) {
+  .header__content {
+    max-width: 500px;
+  }
+  .header__content-title {
+    font-size: 52px;
+    line-height: 50px;
+  }
+  .header__content-title span {
+    font-size: 94.5px;
+  }
+  .header__content-text {
+    font-size: 20px;
+  }
+}
+@media (max-width: 520px) {
+  .header__content {
+    max-width: 400px;
+  }
+  .header__content-title {
+    font-size: 41.5px;
+    line-height: 40px;
+  }
+  .header__content-title span {
+    font-size: 75.5px;
+  }
+  .header__content-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 425px) {
+  .header__content {
+    max-width: 350px;
+  }
+  .header__content-title {
+    font-size: 36px;
+    line-height: 35px;
+  }
+  .header__content-title span {
+    font-size: 65.5px;
+  }
+  .header__content-text {
+    font-size: 14px;
+  }
+  .header__content-btn {
+    font-size: 20px;
+  }
+}
+@media (max-width: 370px) {
+  .phone {
+    font-size: 20px;
+  }
+  .header__content {
+    max-width: 300px;
+  }
+  .header__content-title {
+    font-size: 31px;
+    line-height: 35px;
+  }
+  .header__content-title span {
+    font-size: 56px;
+  }
+  .header__content-text {
+    font-size: 13px;
+  }
+  .header__content-btn {
+    font-size: 18px;
+  }
+}

@@ -93,6 +93,7 @@ button {
   z-index: 1000;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
 .contacts__form-container {
   position: relative;
 }
@@ -842,7 +843,6 @@ button {
         transform: rotate(-45deg);
         bottom: 9px;
         left: 0;
-
       }
       &.--active::before {
         transform: rotate(45deg);
@@ -890,5 +890,78 @@ button {
   }
   .phone:hover {
     color: inherit;
+  }
+}
+
+@media (max-width: 610px) {
+  .header__content {
+    max-width: 500px;
+    &-title {
+      font-size: 52px;
+      line-height: 50px;
+      & span {
+        font-size: 94.5px;
+      }
+    }
+    &-text {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .header__content {
+    max-width: 400px;
+    &-title {
+      font-size: 41.5px;
+      line-height: 40px;
+      & span {
+        font-size: 75.5px;
+      }
+    }
+    &-text {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .header__content {
+    max-width: 350px;
+    &-title {
+      font-size: 36px;
+      line-height: 35px;
+      & span {
+        font-size: 65.5px;
+      }
+    }
+    &-text {
+      font-size: 14px;
+    }
+    &-btn {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  .phone {
+    font-size: 20px;
+  }
+  .header__content {
+    max-width: 300px;
+    &-title {
+      font-size: 31px;
+      line-height: 35px;
+      & span {
+        font-size: 56px;
+      }
+    }
+    &-text {
+      font-size: 13px;
+    }
+    &-btn {
+      font-size: 18px;
+    }
   }
 }
