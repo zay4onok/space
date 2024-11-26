@@ -882,7 +882,11 @@ button {
   }
 }
 @media (max-width: 610px) {
+  .header {
+    background-position: bottom right;
+  }
   .header__content {
+    margin: 0 auto;
     max-width: 500px;
   }
   .header__content-title {
@@ -895,8 +899,14 @@ button {
   .header__content-text {
     font-size: 20px;
   }
+  .header__description {
+    justify-content: center;
+  }
 }
 @media (max-width: 520px) {
+  .header {
+    background-position: 95%;
+  }
   .popup__content {
     width: 400px;
   }
@@ -915,6 +925,9 @@ button {
   }
 }
 @media (max-width: 425px) {
+  .header {
+    background-position: 90%;
+  }
   .popup__content {
     width: 300px;
   }
