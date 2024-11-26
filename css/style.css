@@ -121,6 +121,10 @@ button {
   margin-bottom: 20px;
 }
 
+.contacts__form-container:last-of-type {
+  margin-bottom: 25px;
+}
+
 .popup .contacts__btn {
   text-align: center;
   text-transform: uppercase;
@@ -893,6 +897,9 @@ button {
   }
 }
 @media (max-width: 520px) {
+  .popup__content {
+    width: 400px;
+  }
   .header__content {
     max-width: 400px;
   }
@@ -908,6 +915,16 @@ button {
   }
 }
 @media (max-width: 425px) {
+  .popup__content {
+    width: 300px;
+  }
+  .popup__content-title {
+    font-size: 26px;
+    padding-bottom: 15px;
+  }
+  .popup .contacts__btn {
+    padding: 20px 20px;
+  }
   .header__content {
     max-width: 350px;
   }
@@ -923,6 +940,9 @@ button {
   }
   .header__content-btn {
     font-size: 20px;
+  }
+  .header__description {
+    gap: 25px;
   }
 }
 @media (max-width: 370px) {
@@ -944,5 +964,8 @@ button {
   }
   .header__content-btn {
     font-size: 18px;
+  }
+  .header__description {
+    gap: 25px;
   }
 }

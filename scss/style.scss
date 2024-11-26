@@ -113,6 +113,9 @@ button {
 .popup .contacts__form-input:last-of-type {
   margin-bottom: 20px;
 }
+.contacts__form-container:last-of-type {
+  margin-bottom: 25px;
+}
 
 .popup .contacts__btn {
   text-align: center;
@@ -910,6 +913,9 @@ button {
 }
 
 @media (max-width: 520px) {
+  .popup__content {
+    width: 400px;
+  }
   .header__content {
     max-width: 400px;
     &-title {
@@ -926,6 +932,16 @@ button {
 }
 
 @media (max-width: 425px) {
+  .popup__content {
+    width: 300px;
+    &-title {
+      font-size: 26px;
+      padding-bottom: 15px;
+    }
+  }
+  .popup .contacts__btn {
+    padding: 20px 20px;
+  }
   .header__content {
     max-width: 350px;
     &-title {
@@ -941,6 +957,9 @@ button {
     &-btn {
       font-size: 20px;
     }
+  }
+  .header__description {
+    gap: 25px;
   }
 }
 
@@ -963,5 +982,8 @@ button {
     &-btn {
       font-size: 18px;
     }
+  }
+  .header__description {
+    gap: 25px;
   }
 }
