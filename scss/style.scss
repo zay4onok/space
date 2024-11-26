@@ -864,7 +864,7 @@ button {
       width: 100%;
       background-color: #010203;
       z-index: 2;
-      transform: translateY(-400px);
+      transform: translateY(-500px);
       transition: all 0.5s;
       &.--active {
         transform: translateY(0);
