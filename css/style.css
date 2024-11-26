@@ -189,21 +189,21 @@ button {
   align-items: center;
   padding: 25px 0 30px;
   opacity: 0;
-  transform: translate(0px, -20%);
   transition: all 1s ease;
 }
 .header__top.--active {
-  transform: translate(0px, 0px);
   opacity: 1;
 }
 .header__content {
+  position: relative;
+  z-index: 1;
   max-width: 600px;
   opacity: 0;
-  transform: translate(-20%, 0);
+  transform: translate(-20%, 0px);
   transition: all 1s ease 0.5s;
 }
 .header__content.--active {
-  transform: translate(0, 0);
+  transform: translate(0px, 0px);
   opacity: 1;
 }
 .header__content-title {
@@ -260,6 +260,34 @@ button {
   line-height: 17px;
 }
 
+.menu__btn {
+  display: none;
+  width: 40px;
+  height: 20px;
+  padding: 0;
+  position: relative;
+  margin-left: 15px;
+}
+.menu__btn span {
+  display: block;
+  height: 2px;
+  background-color: #fff;
+}
+.menu__btn::after, .menu__btn::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.menu__btn::after {
+  bottom: 100%;
+}
+.menu__btn::before {
+  top: 100%;
+}
 .menu__list {
   display: flex;
   gap: 30px;
@@ -783,4 +811,69 @@ button {
 }
 .footer__links-link:hover {
   color: #cb0e0e;
+}
+
+@media (max-width: 1000px) {
+  .login {
+    margin-right: 0;
+  }
+}
+@media (max-width: 900px) {
+  .menu__btn {
+    display: block;
+    z-index: 5;
+  }
+  .menu__btn::after, .menu__btn::before {
+    transition: all 0.3s;
+  }
+  .menu__btn.--active span {
+    display: none;
+  }
+  .menu__btn.--active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+    left: 0;
+  }
+  .menu__btn.--active::before {
+    transform: rotate(45deg);
+    top: 9px;
+    left: 0;
+  }
+  .menu__list {
+    position: absolute;
+    display: block;
+    top: 0%;
+    left: 0;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    text-align: center;
+    width: 100%;
+    background-color: #010203;
+    z-index: 2;
+    transform: translateY(-400px);
+    transition: all 0.5s;
+  }
+  .menu__list.--active {
+    transform: translateY(0);
+  }
+  .menu__item {
+    padding: 15px 0;
+  }
+  .menu__item::after {
+    transition: none;
+    width: 0;
+  }
+  .menu__item:hover::after {
+    width: 0;
+  }
+  .menu__link:hover {
+    color: inherit;
+  }
+  .phone,
+  .login {
+    z-index: 5;
+  }
+  .phone:hover {
+    color: inherit;
+  }
 }

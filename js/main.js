@@ -33,9 +33,9 @@ if (animItems.length > 0) {
   }
 }
 
-if ("scrollRestoration" in history) {
-  history.scrollRestoration = "manual";
-}
+// if ("scrollRestoration" in history) {
+//   history.scrollRestoration = "manual";
+// }
 
 $(".slider__box").slick({
   prevArrow:
@@ -181,4 +181,34 @@ popup.addEventListener("click", function (event) {
     document.body.classList.remove("--no-scroll");
     animOnScroll();
   }
+});
+
+const btn = document.querySelector(".menu__btn");
+const list = document.querySelector(".menu__list");
+const tel = document.querySelector(".phone");
+const login = document.querySelector(".login");
+
+btn.addEventListener("click", () => {
+  btn.classList.toggle("--active");
+  list.classList.toggle("--active");
+});
+
+document.addEventListener("click", (event) => {
+  if (
+    !btn.contains(event.target) &&
+    !list.contains(event.target) &&
+    !tel.contains(event.target) &&
+    !login.contains(event.target)
+  ) {
+    btn.classList.remove("--active");
+    list.classList.remove("--active");
+  }
+});
+
+btn.addEventListener("click", (event) => {
+  event.stopPropagation();
+});
+
+list.addEventListener("click", (event) => {
+  event.stopPropagation();
 });
