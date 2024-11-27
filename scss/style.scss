@@ -883,6 +883,15 @@ button {
   .login {
     margin-right: 0;
   }
+  .to-book__wrapper {
+    display: block;
+  }
+  .to-book__content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 0px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -952,6 +961,10 @@ button {
 }
 
 @media (max-width: 610px) {
+  .title {
+    font-size: 40px;
+    line-height: 40px;
+  }
   .header {
     background-position: bottom right;
   }
@@ -1004,7 +1017,8 @@ button {
 
 @media (max-width: 520px) {
   .title {
-    font-size: 40px;
+    font-size: 35px;
+    line-height: 35px;
   }
   .header {
     background-position: 95%;
@@ -1048,11 +1062,15 @@ button {
       }
     }
   }
+  .to-book__content {
+    gap: 25px;
+}
 }
 
 @media (max-width: 425px) {
   .title {
-    font-size: 32px;
+    font-size: 25px;
+    line-height: 25px;
   }
   .header {
     background-position: 90%;
