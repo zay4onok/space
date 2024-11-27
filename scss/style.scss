@@ -500,6 +500,7 @@ button {
   &__items {
     display: flex;
     justify-content: space-between;
+    gap: 25px;
     opacity: 0;
     transform: translate(0, 20%);
     transition: all 1s ease;
@@ -958,6 +959,14 @@ button {
   .phone:hover {
     color: inherit;
   }
+  .special-offer__items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .special-offer__item {
+    margin-bottom: 50px;
+    width: 500px;
+  }
 }
 
 @media (max-width: 610px) {
@@ -1013,6 +1022,9 @@ button {
       }
     }
   }
+  .special-offer__item-box {
+    padding: 40px 30px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1064,7 +1076,7 @@ button {
   }
   .to-book__content {
     gap: 25px;
-}
+  }
 }
 
 @media (max-width: 425px) {
