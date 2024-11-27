@@ -412,13 +412,19 @@ button {
   }
 }
 
+.svg-1 {
+  width: 1100px;
+}
+.svg-2 {
+  display: none;
+}
+
 .how-to {
   background-image: url(../images/how-to-bg.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 50px;
-  min-height: 100vh;
   &__wrapper {
     padding-left: 177px;
     opacity: 0;
@@ -826,10 +832,34 @@ button {
   }
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1350px) {
+  .how-to__wrapper {
+    padding-left: 0;
+    &-box:hover &-text {
+      font-size: 18px;
+      fill: #036cca;
+      transform: translateY(0px);
+    }
+    &-box:hover &-textspan {
+      font-size: 18px;
+      fill: #036cca;
+      transform: translateY(0px);
+    }
+  }
   .title {
+    padding: 50px 0;
     text-align: center;
   }
+  .svg-1 {
+    display: none;
+  }
+  .svg-2 {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1150px) {
   .about {
     &__item {
       display: block;
@@ -973,6 +1003,9 @@ button {
 }
 
 @media (max-width: 520px) {
+  .title {
+    font-size: 40px;
+  }
   .header {
     background-position: 95%;
   }
@@ -1018,6 +1051,9 @@ button {
 }
 
 @media (max-width: 425px) {
+  .title {
+    font-size: 32px;
+  }
   .header {
     background-position: 90%;
   }
@@ -1081,5 +1117,5 @@ button {
   }
   .button {
     font-size: 16px;
-}
+  }
 }
