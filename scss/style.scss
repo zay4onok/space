@@ -118,11 +118,12 @@ button {
 }
 
 .popup .contacts__btn {
+  font-family: "spaceagecyrillic-regular";
   text-align: center;
   text-transform: uppercase;
   padding: 20px 45px;
   border: 1px solid #fff;
-  font-size: 18px;
+  font-size: 23px;
   line-height: 21px;
   transition: all 0.3s ease;
   &:hover {
@@ -142,6 +143,7 @@ button {
   font-weight: 400;
   padding-bottom: 30px;
 }
+
 .popup__content {
   position: absolute;
   top: 50%;
@@ -940,6 +942,14 @@ button {
       font-size: 16px;
     }
   }
+  .popup .contacts__btn {
+    padding: 20px 35px;
+    font-size: 18px;
+  }
+  .popup__content-title {
+    font-family: "spaceagecyrillic-regular";
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 425px) {
@@ -949,12 +959,13 @@ button {
   .popup__content {
     width: 300px;
     &-title {
-      font-size: 26px;
+      font-size: 22px;
       padding-bottom: 15px;
     }
   }
   .popup .contacts__btn {
-    padding: 20px 20px;
+    padding: 15px 20px;
+    font-size: 14px;
   }
   .header__content {
     max-width: 350px;
@@ -975,6 +986,9 @@ button {
   .header__description {
     gap: 25px;
   }
+  .contacts__form-container:last-of-type {
+    margin-bottom: 15px;
+}
 }
 
 @media (max-width: 370px) {
