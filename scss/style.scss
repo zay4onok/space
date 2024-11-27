@@ -574,7 +574,7 @@ button {
   }
 
   &__box-list {
-    width: 620px;
+    max-width: 620px;
     margin-right: 80px;
   }
 
@@ -613,7 +613,7 @@ button {
   }
 
   &__buttons {
-    width: 500px;
+    max-width: 500px;
     & .button {
       width: 100%;
     }
@@ -893,9 +893,21 @@ button {
     gap: 50px;
     margin-top: 0px;
   }
+  .services__box-list {
+    max-width: 440px;
+  }
 }
 
 @media (max-width: 900px) {
+  .header__content {
+    margin: 0 auto;
+  }
+  .header__description {
+    justify-content: center;
+  }
+  .about__item {
+    padding-bottom: 50px;
+}
   .menu {
     &__btn {
       display: block;
@@ -967,6 +979,26 @@ button {
     margin-bottom: 50px;
     width: 500px;
   }
+  .services__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .services__box-list {
+    margin-right: 0px;
+    margin-bottom: 150px;
+  }
+  .services__box-list {
+    max-width: 620px;
+  }
+  .how-to {
+    padding-bottom: 0px;
+}
+.special-offer {
+  margin-bottom: 0px;
+}
+.services {
+  margin-bottom: 0px;
+}
 }
 
 @media (max-width: 610px) {
@@ -1147,5 +1179,6 @@ button {
   }
   .button {
     font-size: 16px;
+    padding: 20px 30px;
   }
 }
