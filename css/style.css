@@ -683,7 +683,7 @@ button {
   opacity: 1;
 }
 .contacts__box {
-  width: 500px;
+  max-width: 500px;
 }
 .contacts__box-text {
   font-size: 24px;
@@ -694,17 +694,17 @@ button {
   padding-bottom: 46px;
 }
 .contacts__form-input {
+  outline-color: #fff;
   background-color: #010203;
   border: none;
   border-bottom: 1px solid #fff;
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 10px;
   margin-bottom: 40px;
   font-family: "SF-Pro-Display";
   font-size: 14px;
   line-height: 17px;
   color: #fff;
-  padding-left: 5px;
 }
 .contacts__form-input::-moz-placeholder {
   font-family: "SF-Pro-Display";
@@ -744,7 +744,7 @@ button {
   color: white;
 }
 .contacts__guarantees {
-  width: 600px;
+  max-width: 600px;
 }
 .contacts__guarantees-text {
   font-size: 24px;
@@ -846,6 +846,13 @@ button {
   .svg-2 {
     display: block;
     margin: 0 auto;
+  }
+  .slider__arrow {
+    top: 110%;
+  }
+  .slider__box-img {
+    width: 100%;
+    padding: 0 20px;
   }
 }
 @media (max-width: 1150px) {
@@ -975,7 +982,16 @@ button {
     margin-bottom: 0px;
   }
   .services {
-    margin-bottom: 0px;
+    margin-bottom: 50px;
+  }
+  .contacts__wrapper {
+    display: block;
+  }
+  .contacts__box {
+    margin: 0 auto;
+  }
+  .contacts__guarantees {
+    margin: 0 auto;
   }
 }
 @media (max-width: 610px) {
@@ -1032,6 +1048,18 @@ button {
   .special-offer__item-box {
     padding: 40px 30px;
   }
+  .contacts__guarantees-img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+  }
+  .contacts__guarantees-text {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .footer__wrapper {
+    gap: 50px;
+  }
 }
 @media (max-width: 520px) {
   .title {
@@ -1081,6 +1109,22 @@ button {
   .to-book__content {
     gap: 25px;
   }
+  .contacts__guarantees-text {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .services__list-title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .services__list {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .footer__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 @media (max-width: 425px) {
   .title {
@@ -1123,6 +1167,30 @@ button {
   .contacts__form-container:last-of-type {
     margin-bottom: 15px;
   }
+  .contacts__form-input:last-of-type {
+    margin-bottom: 50px;
+  }
+  .contacts__form-input {
+    margin-bottom: 30px;
+  }
+  .contacts__box-text {
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .contacts__guarantees-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .services__list-title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .services__list {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 @media (max-width: 370px) {
   .phone {
@@ -1150,5 +1218,14 @@ button {
   .button {
     font-size: 16px;
     padding: 20px 30px;
+  }
+  .slider__arrow-right {
+    right: 20px;
+  }
+  .slider__arrow-left {
+    left: 20px;
+  }
+  .contacts__btn {
+    padding: 20px 35px;
   }
 }
