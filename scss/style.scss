@@ -169,6 +169,7 @@ button {
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -191,8 +192,8 @@ button {
     z-index: 1;
     max-width: 600px;
     opacity: 0;
-    transform: translate(-20%, 0px);
-    transition: all 1s ease 0.5s;
+    transform: translate(-100%, 0px);
+    transition: all 1s ease 0.4s;
     &.--active {
       transform: translate(0px, 0px);
       opacity: 1;
@@ -239,8 +240,8 @@ button {
     margin-top: 40px;
     margin-bottom: 50px;
     opacity: 0;
-    transform: translate(20%, 0px);
-    transition: all 1s ease 0.8s;
+    transform: translate(100%, 0px);
+    transition: all 1s ease 0.6s;
     &.--active {
       opacity: 1;
       transform: translate(0px, 0px);
